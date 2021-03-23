@@ -294,7 +294,7 @@ Com a seguinte configuração, vamos concatenar todos os arquivos em um único a
 ```vim make config.sh```
 
 Inclua o seguinte texto:
-
+```
 KEY_DIR=~/client-conf/keys
 OUTPU_DIR=~/client-conf/files
 BASE_CONFIG=~/client-conf/base.conf
@@ -310,6 +310,7 @@ cat ${BASE_CONFIG} \
     ${KEY-DIR}/ta.key \
     <(echo -e '</tls-auth>')> \
     > ${OUTPUT_DIR}/${1}.ovpn
+```
 
 Salve o arquivo e feche
 
